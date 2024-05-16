@@ -6,10 +6,8 @@ use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Database\Events\DatabaseRefreshed;
-use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputOption;
 
-#[AsCommand(name: 'migrate:refresh')]
 class RefreshCommand extends Command
 {
     use ConfirmableTrait;
@@ -69,7 +67,7 @@ class RefreshCommand extends Command
 
         if ($this->laravel->bound(Dispatcher::class)) {
             $this->laravel[Dispatcher::class]->dispatch(
-                new DatabaseRefreshed($database, $this->needsSeeding())
+                new DatabaseRefreshed
             );
         }
 

@@ -4,10 +4,8 @@ namespace Illuminate\Database\Console\Migrations;
 
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Database\Migrations\Migrator;
-use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputOption;
 
-#[AsCommand(name: 'migrate:reset')]
 class ResetCommand extends BaseCommand
 {
     use ConfirmableTrait;
@@ -62,7 +60,7 @@ class ResetCommand extends BaseCommand
             // start trying to rollback and re-run all of the migrations. If it's not
             // present we'll just bail out with an info message for the developers.
             if (! $this->migrator->repositoryExists()) {
-                return $this->components->warn('Migration table not found.');
+                return $this->comment('Migration table not found.');
             }
 
             $this->migrator->setOutput($this->output)->reset(
