@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\CollectionController' => $baseDir . '/app/Http/Controllers/CollectionController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\GroupController' => $baseDir . '/app/Http/Controllers/GroupController.php',
     'App\\Http\\Controllers\\LoanController' => $baseDir . '/app/Http/Controllers/LoanController.php',
@@ -20,6 +21,7 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Models\\Collection' => $baseDir . '/app/Models/Collection.php',
     'App\\Models\\GroupCount' => $baseDir . '/app/Models/GroupCount.php',
     'App\\Models\\GroupLoan' => $baseDir . '/app/Models/GroupLoan.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
@@ -140,6 +142,7 @@ return array(
     'Cron\\HoursField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
     'Cron\\MinutesField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
     'Cron\\MonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
+    'Database\\Factories\\CollectionFactory' => $baseDir . '/database/factories/CollectionFactory.php',
     'Database\\Factories\\UserFactory' => $baseDir . '/database/factories/UserFactory.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

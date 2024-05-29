@@ -26,3 +26,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('groups',GroupController::class);
 Route::resource('loans',LoanController::class);
+// Route::get('groups/{id}', [GroupController::class, 'getGroupById']);
